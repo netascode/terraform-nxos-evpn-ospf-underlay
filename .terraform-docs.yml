@@ -1,0 +1,44 @@
+version: '>= 0.14.0'
+
+formatter: markdown table
+
+content: |-
+  [![Tests](https://github.com/netascode/terraform-nxos-evpn-ospf-underlay/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-nxos-evpn-ospf-underlay/actions/workflows/test.yml)
+
+  # Terraform NX-OS EVPN OSPF Underlay Module
+
+  This module can manage a Nexus 9000 EVPN fabric underlay network based on OSPF.
+
+  The following assumptions have been made:
+
+  - IP unnumbered is used on all fabric links
+  - OSPF area 0 is used for all interfaces
+  - PIM sparse mode is enabled on all interfaces
+  - A system MTU of 9216 is configured on all devices
+  - All spines act as a PIM Anycast RP
+  - Each leaf is connected to each spine with a single link
+  - The same consecutive range of interfaces is used on all leafs for fabric links
+  - The same consecutive range of interfaces is used on all spines for fabric links
+
+  ## Examples
+
+  ```hcl
+  {{ include "./examples/complete/main.tf" }}
+  ```
+
+  {{ .Requirements }}
+
+  {{ .Providers }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  {{ .Resources }}
+
+output:
+  file: README.md
+  mode: replace
+
+sort:
+  enabled: false
