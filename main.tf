@@ -83,7 +83,7 @@ module "nxos_vrf" {
 
 module "loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.2"
+  version = ">= 0.1.3"
 
   for_each = local.all
 
@@ -97,7 +97,7 @@ module "loopback" {
 
 module "pim_loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.2"
+  version = ">= 0.1.3"
 
   for_each = var.spines
 
@@ -111,7 +111,7 @@ module "pim_loopback" {
 
 module "vtep_loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.2"
+  version = ">= 0.1.3"
 
   for_each = var.leafs
 
