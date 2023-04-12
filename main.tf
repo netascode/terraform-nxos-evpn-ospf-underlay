@@ -125,7 +125,7 @@ module "vtep_loopback" {
 
 module "leaf_fabric_interface" {
   source  = "netascode/interface-ethernet/nxos"
-  version = ">= 0.1.0"
+  version = ">= 0.1.1"
 
   for_each = local.leaf_fabric_interface_map
 
@@ -140,7 +140,7 @@ module "leaf_fabric_interface" {
 
 module "spine_fabric_interface" {
   source  = "netascode/interface-ethernet/nxos"
-  version = ">= 0.1.0"
+  version = ">= 0.1.1"
 
   for_each = local.spine_fabric_interface_map
 
