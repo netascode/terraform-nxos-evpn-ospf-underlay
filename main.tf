@@ -55,7 +55,7 @@ resource "nxos_ethernet" "ethernet" {
 
 module "nxos_features" {
   source  = "netascode/features/nxos"
-  version = ">= 0.1.0"
+  version = ">= 0.1.1"
 
   for_each = local.all
 
