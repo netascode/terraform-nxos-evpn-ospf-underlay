@@ -73,7 +73,7 @@ module "nxos_features" {
 
 module "nxos_vrf" {
   source  = "netascode/vrf/nxos"
-  version = ">= 0.1.2"
+  version = ">= 0.2.0"
 
   for_each = local.all
 
@@ -155,7 +155,7 @@ module "spine_fabric_interface" {
 
 module "nxos_ospf" {
   source  = "netascode/ospf/nxos"
-  version = ">= 0.1.0"
+  version = ">= 0.2.0"
 
   for_each = local.all
 
@@ -185,7 +185,7 @@ module "nxos_ospf" {
 
 module "nxos_pim" {
   source  = "netascode/pim/nxos"
-  version = ">= 0.1.3"
+  version = ">= 0.2.0"
 
   for_each = local.all
 
@@ -203,7 +203,7 @@ module "nxos_pim" {
       anycast_rps = [for spine in var.spines :
         {
           address     = var.anycast_rp_ipv4_address
-          set_address = "${[for l in var.loopbacks : l.ipv4_address if l.device == spine][0]}"
+          set_address = [for l in var.loopbacks : l.ipv4_address if l.device == spine][0]
         } if spine != each.value
       ]
       interfaces = [for int in local.all_interface_map :
