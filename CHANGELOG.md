@@ -1,6 +1,6 @@
-## 0.2.0 (unreleased)
+## 0.1.2 (unreleased)
 
-- BREAKING CHANGE: Migrate to Terraform 1.3 optionals syntax
+- Upgrade modules
 
 ## 0.1.1
 
