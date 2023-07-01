@@ -21,7 +21,7 @@ The following assumptions have been made:
 ```hcl
 module "nxos_evpn_ospf_underlay" {
   source  = "netascode/evpn-ospf-underlay/nxos"
-  version = ">= 0.1.0"
+  version = ">= 0.2.0"
 
   leafs           = ["LEAF-1", "LEAF-2"]
   spines          = ["SPINE-1", "SPINE-2"]
@@ -73,13 +73,13 @@ module "nxos_evpn_ospf_underlay" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.0 |
-| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >=0.3.19 |
+| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >=0.3.19 |
+| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.5.0 |
 
 ## Inputs
 
@@ -112,6 +112,6 @@ module "nxos_evpn_ospf_underlay" {
 
 | Name | Type |
 |------|------|
-| [nxos_ethernet.ethernet](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/ethernet) | resource |
-| [nxos_system.system](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/system) | resource |
+| [nxos_ethernet.ethernet](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/ethernet) | resource |
+| [nxos_system.system](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/system) | resource |
 <!-- END_TF_DOCS -->

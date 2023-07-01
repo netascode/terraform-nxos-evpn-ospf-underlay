@@ -55,7 +55,7 @@ resource "nxos_ethernet" "ethernet" {
 
 module "nxos_features" {
   source  = "netascode/features/nxos"
-  version = ">= 0.1.1"
+  version = ">= 0.2.0"
 
   for_each = local.all
 
@@ -73,7 +73,7 @@ module "nxos_features" {
 
 module "nxos_vrf" {
   source  = "netascode/vrf/nxos"
-  version = ">= 0.2.0"
+  version = ">= 0.3.0"
 
   for_each = local.all
 
@@ -83,7 +83,7 @@ module "nxos_vrf" {
 
 module "loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.3"
+  version = ">= 0.2.0"
 
   for_each = local.all
 
@@ -97,7 +97,7 @@ module "loopback" {
 
 module "pim_loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.3"
+  version = ">= 0.2.0"
 
   for_each = var.spines
 
@@ -111,7 +111,7 @@ module "pim_loopback" {
 
 module "vtep_loopback" {
   source  = "netascode/interface-loopback/nxos"
-  version = ">= 0.1.3"
+  version = ">= 0.2.0"
 
   for_each = var.leafs
 
@@ -125,7 +125,7 @@ module "vtep_loopback" {
 
 module "leaf_fabric_interface" {
   source  = "netascode/interface-ethernet/nxos"
-  version = ">= 0.1.1"
+  version = ">= 0.2.0"
 
   for_each = local.leaf_fabric_interface_map
 
@@ -140,7 +140,7 @@ module "leaf_fabric_interface" {
 
 module "spine_fabric_interface" {
   source  = "netascode/interface-ethernet/nxos"
-  version = ">= 0.1.1"
+  version = ">= 0.2.0"
 
   for_each = local.spine_fabric_interface_map
 
@@ -155,7 +155,7 @@ module "spine_fabric_interface" {
 
 module "nxos_ospf" {
   source  = "netascode/ospf/nxos"
-  version = ">= 0.2.0"
+  version = ">= 0.3.0"
 
   for_each = local.all
 
@@ -185,7 +185,7 @@ module "nxos_ospf" {
 
 module "nxos_pim" {
   source  = "netascode/pim/nxos"
-  version = ">= 0.2.0"
+  version = ">= 0.3.0"
 
   for_each = local.all
 
